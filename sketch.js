@@ -35,17 +35,18 @@ let cross;
 function preload() {
   // Load model with normalise parameter set to true
   cross = loadModel('models/HellHeaven.obj', true);
+  bgImg = loadImage("images/pexels-felix-mittermeier-1205301.jpg");
 }
 
 function setup() {
-  createCanvas(2000, 700, WEBGL);
+  createCanvas(800, 700, WEBGL);
 }
 
 function draw() {
   background(0);
-  scale(2); // Scaled to make model fit into canvas
+  scale(3); // Scaled to make model fit into canvas
   rotateX(frameCount * 0.01);
-  rotateY(frameCount * 0.01);
+  //rotateY(frameCount * 0.01);
   normalMaterial(); // For effect
   model(cross);
 }
