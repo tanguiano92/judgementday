@@ -26,9 +26,9 @@ function draw() {
         cos(2 * a) * radius * sin(b)
       );
       if (j % 2 === 0) {
-        cone(30, 30);
+        sphere(50, 50, 50);
       } else {
-        box(30, 30, 30);
+        sphere(30, 30, 30);
       }
       pop();
     }
@@ -37,9 +37,9 @@ function draw() {
   let locX = mouseX - height / 2;
   let locY = mouseY - width / 2;
 
-  ambientLight(50);
-  directionalLight(255, 0, 0, 0.25, 0.25, 0);
-  pointLight(0, 0, 255, locX, locY, 250);
+  ambientLight(255);
+  directionalLight(255, 25, 0, 0.25, 0.25, 0);
+  pointLight(0, 0, 255, locX, locY, 255);
 
   push();
   translate(-width / 4, 0, 0);
