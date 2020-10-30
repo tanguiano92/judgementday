@@ -1,4 +1,5 @@
 var bgImg;
+var cross;
 var x1 = 0;
 var x2;
 var scrollSpeed = .5;
@@ -30,12 +31,12 @@ function draw() {
   }
 }
 
-let cross;
+
 
 function preload() {
   // Load model with normalise parameter set to true
   cross = loadModel('models/HellHeaven.obj', true);
-  bgImg = loadImage("images/pexels-felix-mittermeier-1205301.jpg");
+
 }
 
 function setup() {
