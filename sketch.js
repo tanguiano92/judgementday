@@ -1,10 +1,10 @@
 var bgImg;
 var x1 = 0;
 var x2;
-
-var scrollSpeed = 2;
+var scrollSpeed = .5;
 
 function preload(){
+  cross = loadModel('models/HellHeaven.obj');
 	bgImg = loadImage("images/pexels-felix-mittermeier-1205301.jpg");
 }
 
@@ -15,6 +15,7 @@ function setup() {
 }
 
 function draw() {
+
 	image(bgImg, x1, 0, width, height);
   image(bgImg, x2, 0, width, height);
 
@@ -27,5 +28,24 @@ function draw() {
   if (x2 < -width){
     x2 = width;
   }
+}
 
+let cross;
+
+function preload() {
+  // Load model with normalise parameter set to true
+  cross = loadModel('models/HellHeaven.obj', true);
+}
+
+function setup() {
+  createCanvas(2000, 700, WEBGL);
+}
+
+function draw() {
+  background(0);
+  scale(2); // Scaled to make model fit into canvas
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  normalMaterial(); // For effect
+  model(cross);
 }
