@@ -40,12 +40,12 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 700, WEBGL);
+  createCanvas(1500, 700, WEBGL);
 }
 
 function draw() {
   background(0);
-  scale(3); // Scaled to make model fit into canvas
+  scale(4); // Scaled to make model fit into canvas
   rotateX(frameCount * 0.01);
   //rotateY(frameCount * 0.01);
   normalMaterial(); // For effect
