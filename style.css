@@ -8,8 +8,9 @@ canvas {
 #navigation li {
   font-size: 25pt;
   float: center;
-  padding:5px;
+  padding: 2px;
   list-style-type: none;
-  background-color: #2d4273;
-  margin-right: 20px;
+  background-color: white;
+  margin-right: 100px;
+  margin-left: 100px;
 }
